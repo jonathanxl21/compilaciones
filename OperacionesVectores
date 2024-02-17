@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class OperacionesVectores {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("Menú:");
+            System.out.println("1. Suma de vectores");
+            System.out.println("2. Resta de vectores");
+            System.out.println("3. Salir");
+            System.out.print("Ingrese su opción: ");
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    sumaVectores();
+                    break;
+                case 2:
+                    restaVectores();
+                    break;
+                case 3:
+                    System.out.println("¡Hasta luego!");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
+        } while (opcion != 3);
+
+        scanner.close();
+    }
+
+    public static void sumaVectores() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese las componentes del primer vector:");
+        System.out.print("Componente x: ");
+        double x1 = scanner.nextDouble();
+        System.out.print("Componente y: ");
+        double y1 = scanner.nextDouble();
+        System.out.print("Componente z: ");
+        double z1 = scanner.nextDouble();
+
+        System.out.println("Ingrese las componentes del segundo vector:");
+        System.out.print("Componente x: ");
+        double x2 = scanner.nextDouble();
+        System.out.print("Componente y: ");
+        double y2 = scanner.nextDouble();
+        System.out.print("Componente z: ");
+        double z2 = scanner.nextDouble();
+
+        double resultadoX = x1 + x2;
+        double resultadoY = y1 + y2;
+        double resultadoZ = z1 + z2;
+
+        System.out.println("La suma de los vectores es: (" + resultadoX + ", " + resultadoY + ", " + resultadoZ + ")");
+    }
+
+
+
+        double resultadoX = x1 - x2;
+        double resultadoY = y1 - y2;
+        double resultadoZ = z1 - z2;
+
+        System.out.println("La resta de los vectores es: (" + resultadoX + ", " + resultadoY + ", " + resultadoZ + ")");
+    }
+}
